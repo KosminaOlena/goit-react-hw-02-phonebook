@@ -47,7 +47,6 @@ class App extends Component{
   }
 
   render(){
-    const { filter, contacts } = this.state;
     const filteredContacts = this.onFilter();
 
     return(
@@ -56,7 +55,7 @@ class App extends Component{
         <FormContact createContact = {this.createContact}/>
         <h2>Contacts</h2>
         <Filter filter = {this.state.filter} handleFilter = {this.handleFilter}/>
-        <ListContacts contacts = {filter ? filteredContacts : contacts} handleDelete = {this.deleteContact}/>
+        <ListContacts contacts = { filteredContacts } handleDelete = {this.deleteContact}/>
       </Container>
     )
   }

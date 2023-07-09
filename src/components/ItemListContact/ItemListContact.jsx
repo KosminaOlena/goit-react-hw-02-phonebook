@@ -5,7 +5,7 @@ export const ItemListContact = ({id, name, number, handleDelete}) => {
     return(
         <Item>
                 {name}: {number}
-                <Button onClick={() => handleDelete(id)}>Delete</Button>
+                <Button type='button' onClick={() => handleDelete(id)}>Delete</Button>
             </Item>
     )
 }
